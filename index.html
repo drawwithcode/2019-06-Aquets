@@ -1,13 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
-    <style> body {padding: 0; margin: 0;} </style>
-    <script src="p5.min.js"></script>
-    <!-- <script src="addons/p5.sound.min.js"></script> -->
-    <script src="sketch.js"></script>
-  </head>
-  <body>
-  </body>
+
+<head>
+  <title>Pokémon Team Generator</title>
+  <meta charset="utf-8">
+  <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0>
+  <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+  <style>
+    body {
+      padding: 0;
+      margin: 10px;
+      background-color: #0e0e0e;
+      font-family: 'VT323', monospace;
+      color: white;
+    }
+
+    button{
+      font-size: 30px;
+      font-family: 'VT323', monospace;
+      color: white;
+      background-color: #0e0e0e;
+      padding: 10px;
+      border-style: solid;
+      border-width: 3px;
+      border-color: #161616;
+      text-align: center;
+    }
+    button:hover{
+      border-color: slategrey;
+      background-color: #272626;
+      cursor: pointer;
+    }
+
+    p{
+      margin: 0px;
+    }
+
+    footer{
+      width: 99%;
+      text-align: center;
+      position: absolute;
+      bottom: 20px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 10px;
+    }
+
+    .grid-item {
+      border-style: solid;
+      border-color: #161616;
+      text-align: center;
+      font-size: 30px;
+      padding-bottom: 15px;
+      padding-left: 5%;
+      padding-right: 5%;
+      width: 88%;
+      height: 190px;
+    }
+    .grid-item:hover{
+      border-color: slategrey;
+      background-color: #272626;
+      cursor: pointer;
+    }
+    #buttonContainer{
+      text-align: center;
+      margin: 50px;
+    }
+    .pokePreview{
+      width: 150px;
+      height: 150px;
+      image-rendering: pixelated;
+    }
+  </style>
+  <script src="p5.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <script src="sketch.js"></script>
+</head>
+
+<body>
+  <div id="buttonContainer"></div>
+  <div class="grid-container" id="container"></div>
+  <footer><p>Credits JSON data & Images: <a rel="" href="https://github.com/fanzeyi/pokemon.json">fanzeyi</a> </p></footer>
+</body>
+
+
 </html>
